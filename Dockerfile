@@ -39,7 +39,7 @@ COPY <<EOF /Caddyfile
 	admin off
 }
 
-:80 {
+:8080 {
 	root * /www
 	file_server
 }
@@ -60,7 +60,7 @@ COPY --from=build /src/build /www
 
 USER 1000:1000
 
-EXPOSE 80
+EXPOSE 8080
 EXPOSE 443
 EXPOSE 2019
 
